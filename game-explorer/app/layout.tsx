@@ -1,5 +1,6 @@
-import './globals.css';
+import '../styles/globals.css';
 import type { Metadata } from 'next';
+import { NavBar } from '../components';
 
 export const metadata: Metadata = {
 	title: 'GameExplorer',
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<NavBar />
+				{children}
+			</body>
 		</html>
 	);
 }

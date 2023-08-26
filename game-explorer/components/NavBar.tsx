@@ -19,7 +19,7 @@ export function NavBar() {
 				<input
 					type='search'
 					placeholder='Search'
-					className='px-4 py-2 border rounded-full w-[175px] md:w-[250px] lg:w-[500px]'
+					className='px-4 py-2 border rounded-full w-[175px] md:w-[250px] lg:w-[700px]'
 				/>
 			</form>
 			{/* Hamburger-Toggler */}

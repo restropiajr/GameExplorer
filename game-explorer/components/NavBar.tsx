@@ -6,7 +6,7 @@ import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 
 export function NavBar() {
-	const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+	const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
 	const [mobileMenu, setMobileMenu] = useState(false);
 	return (
 		<nav className='fixed top-0 left-0 w-full h-[80px] bg-[#151515] flex justify-between items-center px-4 gap-2'>

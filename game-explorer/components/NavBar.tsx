@@ -51,11 +51,6 @@ export function NavBar() {
 									<p className='text-white'>Home</p>
 								</Link>
 							</li>
-							<li>
-								<Link href='games' className='flex justify-center items-center'>
-									<p className='text-white'>Games</p>
-								</Link>
-							</li>
 							{!isUserLoggedIn && (
 								<>
 									<li>
@@ -125,19 +120,6 @@ export function NavBar() {
 											onClick={() => setMobileMenu(!mobileMenu)}
 										>
 											Home
-										</p>
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='games'
-										className='flex justify-center items-center '
-									>
-										<p
-											className='text-black'
-											onClick={() => setMobileMenu(!mobileMenu)}
-										>
-											Games
 										</p>
 									</Link>
 								</li>

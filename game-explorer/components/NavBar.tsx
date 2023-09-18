@@ -7,15 +7,17 @@ import { useEffect, useState } from 'react';
 export function NavBar() {
 	const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 	const [mobileMenu, setMobileMenu] = useState(false);
-	const [scrollClassName, setScrollClassName] =
-		useState<string>('bg-[#151515]');
+	const [navbarBG, setNavbarBG] = useState<string>('bg-[#151515]');
+	const [linkBG, setLinkBG] = useState<string>('text-white');
 
 	useEffect(() => {
 		function handleScroll() {
 			if (window.scrollY >= 50) {
-				setScrollClassName('bg-transparent');
+				setNavbarBG('bg-white');
+				setLinkBG('text-black');
 			} else {
-				setScrollClassName('bg-[#151515]');
+				setNavbarBG('bg-[#151515]');
+				setLinkBG('text-white');
 			}
 		}
 		window.addEventListener('scroll', handleScroll);
@@ -27,18 +29,18 @@ export function NavBar() {
 	return (
 		<header>
 			<nav
-				className={`fixed top-0 left-0 w-full h-[80px] z-10 flex justify-center items-center ${scrollClassName} transition ease-in-out duration-500`}
+				className={`fixed top-0 left-0 w-full h-[80px] z-10 flex justify-center items-center ${navbarBG} transition ease-in-out duration-500`}
 			>
 				<div className='flex justify-between items-center px-4 w-full md:w-2/3 mx-auto'>
 					<Link href='/' className='flex justify-center items-center'>
-						<p className='text-white font-bold text-lg tracking-wide'>
+						<p className='font-bold text-lg tracking-wide animate-gradient gradient-text'>
 							GameExplorer
 						</p>
 					</Link>
 					{/* Hamburger-Toggler */}
 					<div className='flex md:hidden'>
 						<FaBars
-							className='text-white cursor-pointer'
+							className={`${linkBG} cursor-pointer`}
 							size={25}
 							onClick={() => setMobileMenu(!mobileMenu)}
 						/>
@@ -48,7 +50,7 @@ export function NavBar() {
 						<ul className='flex justify-center items-center gap-4'>
 							<li>
 								<Link href='/' className='flex justify-center items-center'>
-									<p className='text-white'>Home</p>
+									<p className={`${linkBG}`}>Home</p>
 								</Link>
 							</li>
 							{!isUserLoggedIn && (
@@ -58,7 +60,7 @@ export function NavBar() {
 											href='signin'
 											className='flex justify-center items-center'
 										>
-											<p className='text-white'>Sign In</p>
+											<p className={`${linkBG}`}>Sign In</p>
 										</Link>
 									</li>
 									<li>
@@ -66,7 +68,7 @@ export function NavBar() {
 											href='signup'
 											className='flex justify-center items-center'
 										>
-											<p className='text-white'>Sign Up</p>
+											<p className={`${linkBG}`}>Sign Up</p>
 										</Link>
 									</li>
 								</>
@@ -78,7 +80,7 @@ export function NavBar() {
 											href='wishlist'
 											className='flex justify-center items-center'
 										>
-											<p className='text-white'>Wishlist</p>
+											<p className={`${linkBG}`}>Wishlist</p>
 										</Link>
 									</li>
 									<li>
@@ -86,13 +88,11 @@ export function NavBar() {
 											href='reviews'
 											className='flex justify-center items-center'
 										>
-											<p className='text-white'>Reviews</p>
+											<p className={`${linkBG}`}>Reviews</p>
 										</Link>
 									</li>
 									<li>
-										<button className='flex justify-center items-center text-white'>
-											Sign Out
-										</button>
+										<button className={`${linkBG}`}>Sign Out</button>
 									</li>
 								</>
 							)}

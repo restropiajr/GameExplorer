@@ -19,7 +19,7 @@ export default function Home() {
         </form>
       </section>
       <section className='mt-24 flex w-full flex-col items-center justify-center gap-4 md:w-2/3 md:items-start'>
-        <h2 className='text-2xl text-white underline'>Top Rated Games 2023</h2>
+        <h2 className='text-2xl text-white underline'>Latest Releases</h2>
       </section>
     </main>
   );

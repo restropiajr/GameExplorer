@@ -14,6 +14,7 @@ export default function Home() {
             <Image
               src={GameExplorerIcon}
               width={150}
+              priority={true}
               height={150}
               alt='GameExplorer-Icon'
               className='md:mt-32 lg:mt-0'
@@ -24,7 +25,7 @@ export default function Home() {
                 GameExplorer
               </span>
             </h1>
-            <p className='px-4 text-center text-gray-300'>
+            <p className='px-4 text-center text-lg text-gray-300 md:text-xl'>
               An interactive video game archive to explore and review video
               games!
             </p>
@@ -35,7 +36,7 @@ export default function Home() {
               ignoreCancelEvents={true}
               className='cursor-pointer'
             >
-              <p className='text-md hover-transition border-2 border-white px-4 py-2 md:mb-48 lg:mb-0'>
+              <p className='hover-transition border-2 border-white px-4 py-2 text-lg md:mb-48 md:text-xl lg:mb-0'>
                 See Collection
               </p>
             </ScrollLink>

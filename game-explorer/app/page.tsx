@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <section className='main-container'>
-        <div className='row'>
+        <div className='row-one'>
           <div className='col-one flex min-h-screen flex-col items-center justify-center gap-4'>
             <Image
               src={GameExplorerIcon}
@@ -25,14 +25,14 @@ export default function Home() {
                 GameExplorer
               </span>
             </h1>
-            <p className='px-4 text-center text-lg text-gray-300 md:text-xl'>
+            <p className='px-4 text-center text-lg text-white md:text-xl'>
               An interactive video game archive to explore and review video
               games!
             </p>
             <ScrollLink
               to='games'
               smooth={true}
-              duration={500}
+              duration={750}
               ignoreCancelEvents={true}
               className='cursor-pointer'
             >
@@ -61,18 +61,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section id='games' className='main-container gap-4'>
-        <h2 className='text-3xl text-white'>Collection</h2>
-        <select name='release-date' id='release-date'>
-          <option value=''></option>
-        </select>
-        <form className='flex gap-4'>
-          <input type='search' className='rounded p-2' placeholder='Search' />
-          <button type='button'>
-            <BsSearch className='text-white' size={25} />
-          </button>
-        </form>
-      </section> */}
+      <section id='games' className='main-container'>
+        <div className='row-one'>
+          <div className='col-one mx-auto flex w-full flex-col items-center justify-center gap-4 lg:w-2/3'>
+            <h2 className='mt-32 text-3xl text-white'>Collection</h2>
+            <p className='text-white'>Take a dive into our large selection!</p>
+            <form className='flex gap-4'>
+              <input
+                type='search'
+                className='rounded p-2'
+                placeholder='Search'
+              />
+              <button type='button'>
+                <BsSearch className='text-white' size={25} />
+              </button>
+            </form>
+          </div>
+        </div>
+        <div className='row-two'>
+          <div className='col-one flex-start mx-auto mt-16 flex w-full flex-col gap-4 lg:w-2/3'>
+            <h3 className='ml-8 text-2xl text-white underline'>
+              Recent Titles
+            </h3>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

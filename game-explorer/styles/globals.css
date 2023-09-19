@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -22,10 +22,18 @@
 }
 
 h1 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
-p {
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+p,
+button {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -43,6 +51,15 @@ p {
   .gradient-text {
     @apply bg-gradient-to-r from-white to-[#ff4654] bg-clip-text text-transparent;
   }
+
+  .hover-transition {
+    @apply rounded p-1 text-gray-300 transition duration-500 ease-in-out hover:bg-white hover:text-black;
+  }
+}
+
+.animate-gradient {
+  background-size: 300%;
+  animation: gradientAnimation 3s ease-in-out infinite;
 }
 
 @keyframes gradientAnimation {
@@ -55,11 +72,6 @@ p {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.animate-gradient {
-  background-size: 300%;
-  animation: gradientAnimation 3s ease-in-out infinite;
 }
 
 @keyframes wave {

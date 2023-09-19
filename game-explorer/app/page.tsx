@@ -10,21 +10,22 @@ export default function Home() {
     <main>
       <section className='main-container'>
         <div className='row'>
-          <div className='col-one flex h-screen flex-col items-center justify-center gap-4'>
+          <div className='col-one flex min-h-screen flex-col items-center justify-center gap-4'>
             <Image
               src={GameExplorerIcon}
               width={150}
               height={150}
               alt='GameExplorer-Icon'
+              className='md:mt-32 lg:mt-0'
             />
-            <h1 className='text-center text-5xl text-white md:text-7xl'>
+            <h1 className='text-center text-4xl text-white md:text-6xl'>
               Welcome to {''}
               <span className='font-bold tracking-wide text-white'>
                 GameExplorer
               </span>
             </h1>
             <p className='px-4 text-center text-gray-300'>
-              An interactive video game application to explore and review video
+              An interactive video game archive to explore and review video
               games!
             </p>
             <ScrollLink
@@ -34,12 +35,12 @@ export default function Home() {
               ignoreCancelEvents={true}
               className='cursor-pointer'
             >
-              <p className='text-md transform rounded border-2 border-white px-4 py-2 text-gray-300 duration-500 ease-in-out hover:bg-white hover:text-black'>
+              <p className='text-md hover-transition border-2 border-white px-4 py-2 md:mb-48 lg:mb-0'>
                 See Collection
               </p>
             </ScrollLink>
           </div>
-          <div style={{ position: 'relative' }}>
+          <div className='relative'>
             <AnimatedWave
               color={'#FFEEF2'}
               animationDuration='4s'

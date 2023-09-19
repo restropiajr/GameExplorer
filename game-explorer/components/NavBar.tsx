@@ -28,14 +28,14 @@ export function NavBar() {
       <nav
         className={`fixed left-0 top-0 z-10 flex h-[80px] w-full items-center justify-center ${navbarBG} transition duration-500 ease-in-out`}
       >
-        <div className='mx-auto flex w-full items-center justify-between px-4 md:w-2/3'>
+        <div className='mx-auto flex w-full items-center justify-between px-4 lg:w-2/3'>
           <Link href='/' className='flex items-center justify-center'>
             <p className='animate-gradient gradient-text text-lg font-bold tracking-wide'>
               GameExplorer
             </p>
           </Link>
           {/* Hamburger-Toggler */}
-          <div className='flex md:hidden'>
+          <div className='flex lg:hidden'>
             <FaBars
               className='cursor-pointer text-white'
               size={25}
@@ -43,11 +43,11 @@ export function NavBar() {
             />
           </div>
           {/* Desktop-Menu */}
-          <div className='hidden md:flex'>
+          <div className='hidden lg:flex'>
             <ul className='flex items-center justify-center gap-4'>
               <li>
                 <Link href='/' className='flex items-center justify-center'>
-                  <p className='text-white'>Home</p>
+                  <p className='hover-transition'>Home</p>
                 </Link>
               </li>
               {!isUserLoggedIn && (
@@ -57,7 +57,7 @@ export function NavBar() {
                       href='signin'
                       className='flex items-center justify-center'
                     >
-                      <p className='text-white'>Sign In</p>
+                      <p className='hover-transition'>Sign-In</p>
                     </Link>
                   </li>
                   <li>
@@ -65,7 +65,7 @@ export function NavBar() {
                       href='signup'
                       className='flex items-center justify-center'
                     >
-                      <p className='text-white'>Sign Up</p>
+                      <p className='hover-transition'>Sign-Up</p>
                     </Link>
                   </li>
                 </>
@@ -77,7 +77,7 @@ export function NavBar() {
                       href='wishlist'
                       className='flex items-center justify-center'
                     >
-                      <p className='text-white'>Wishlist</p>
+                      <p className='hover-transition'>Wishlist</p>
                     </Link>
                   </li>
                   <li>
@@ -85,11 +85,11 @@ export function NavBar() {
                       href='reviews'
                       className='flex items-center justify-center'
                     >
-                      <p className='text-white'>Reviews</p>
+                      <p className='hover-transition'>Reviews</p>
                     </Link>
                   </li>
                   <li>
-                    <button className='text-white'>Sign Out</button>
+                    <button className='hover-transition'>Sign-Out</button>
                   </li>
                 </>
               )}
@@ -131,7 +131,7 @@ export function NavBar() {
                           className='text-black'
                           onClick={() => setMobileMenu(!mobileMenu)}
                         >
-                          Sign In
+                          Sign-In
                         </p>
                       </Link>
                     </li>
@@ -144,7 +144,7 @@ export function NavBar() {
                           className='text-black'
                           onClick={() => setMobileMenu(!mobileMenu)}
                         >
-                          Sign Up
+                          Sign-Up
                         </p>
                       </Link>
                     </li>
@@ -183,7 +183,7 @@ export function NavBar() {
                         className='flex items-center justify-center text-black'
                         onClick={() => setMobileMenu(!mobileMenu)}
                       >
-                        Sign Out
+                        Sign-Out
                       </button>
                     </li>
                   </>

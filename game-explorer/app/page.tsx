@@ -64,8 +64,12 @@ export default function Home() {
       <section id='games' className='main-container'>
         <div className='row-one'>
           <div className='col-one mx-auto flex w-full flex-col items-center justify-center gap-4 lg:w-2/3'>
-            <h2 className='mt-32 text-3xl text-white'>Collection</h2>
-            <p className='text-white'>Take a dive into our large selection!</p>
+            <h2 className='mt-32 text-3xl text-white md:text-5xl'>
+              Collection
+            </h2>
+            <p className='text-white md:text-lg'>
+              Take a dive into our large selection!
+            </p>
             <form className='flex gap-4'>
               <input
                 type='search'
@@ -80,7 +84,7 @@ export default function Home() {
         </div>
         <div className='row-two'>
           <div className='col-one flex-start mx-auto mt-16 flex w-full flex-col gap-4 lg:w-2/3'>
-            <h3 className='ml-8 text-2xl text-white underline'>Recent</h3>
+            <h3 className='ml-8 text-2xl text-white md:text-4xl'>Recent</h3>
           </div>
         </div>
       </section>

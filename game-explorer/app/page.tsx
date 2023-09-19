@@ -80,9 +80,7 @@ export default function Home() {
         </div>
         <div className='row-two'>
           <div className='col-one flex-start mx-auto mt-16 flex w-full flex-col gap-4 lg:w-2/3'>
-            <h3 className='ml-8 text-2xl text-white underline'>
-              Recent Titles
-            </h3>
+            <h3 className='ml-8 text-2xl text-white underline'>Recent</h3>
           </div>
         </div>
       </section>

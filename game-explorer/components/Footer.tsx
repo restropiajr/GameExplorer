@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 export function Footer() {
   return (
-    <footer className='flex h-[120px] w-full items-center justify-center bg-[#151515]'>
+    <footer className='flex h-[120px] w-full items-center justify-center bg-[#0a141e]'>
       <div className='flex flex-col items-center justify-center gap-2 text-white'>
         <div className='flex flex-col items-center'>
           <p>Copyright &copy; 2023 Roland Estropia Jr.</p>

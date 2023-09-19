@@ -1,11 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0a141e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff4654;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
 }
 
 @layer components {
@@ -16,10 +37,11 @@
     @apply fixed inset-0 z-30 h-[120px] bg-white transition-transform duration-300 ease-in-out;
   }
   .main-container {
-    @apply flex min-h-screen w-full flex-col items-center justify-center bg-[#151515];
+    @apply min-h-screen w-full bg-gradient-to-t from-[#ff4654] to-[#0a141e];
   }
+
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white to-[#ff4654] bg-clip-text text-transparent;
   }
 }
 
@@ -37,5 +59,14 @@
 
 .animate-gradient {
   background-size: 300%;
-  animation: gradientAnimation 5s ease-in-out infinite;
+  animation: gradientAnimation 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
 }
